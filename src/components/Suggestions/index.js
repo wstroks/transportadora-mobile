@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, Option, Img, Label } from './styles';
 
-import img1 from '../../images/01.png';
+import img1 from '../../images/truck.png';
 import img2 from '../../images/02.png';
 import img3 from '../../images/03.png';
 import img4 from '../../images/04.png';
@@ -13,6 +13,11 @@ import img7 from '../../images/07.png';
 const items = [
     {
         key: String(Math.random()),
+        img: img3,
+        label: "Fretes",
+    },
+    {
+        key: String(Math.random()),
         img: img1,
         label: "Recarga",
     },
@@ -20,11 +25,6 @@ const items = [
         key: String(Math.random()),
         img: img2,
         label: "Uber",
-    },
-    {
-        key: String(Math.random()),
-        img: img3,
-        label: "Ônibus",
     },
     {
         key: String(Math.random()),
@@ -39,7 +39,7 @@ const items = [
     {
         key: String(Math.random()),
         img: img6,
-        label: "Barras",
+        label: "Pagamento",
     },
     {
         key: String(Math.random()),

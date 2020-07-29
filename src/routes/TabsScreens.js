@@ -2,12 +2,10 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { AntDesign, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
-import PayButton from './components/PayButton/index';
-
-import HomeScreen from './screens/Home/index';
-import WalletScreen from './screens/Wallet/index';
-import PayScreen from './screens/Pay/index';
-
+import PayButton from '../components/PayButton/index';
+import HomeScreen from '../screens/Home/index';
+import WalletScreen from '../screens/Wallet/index';
+import PayScreen from '../screens/Pay/index';
 
 const Tab = createBottomTabNavigator();
 
@@ -40,7 +38,7 @@ const icons = {
 
 }
 
-export default function Navigation() {
+export default function TabsScreens() {
     return (
         <Tab.Navigator
         initialRouteName="Wallet"
