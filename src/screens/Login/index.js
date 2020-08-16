@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { KeyboardAvoidingView, Platform} from 'react-native';
 import {
     ContainerKey,
@@ -17,10 +17,19 @@ import {
 } from './styles';
 import { MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { Signin } from '../../services/auth';
+import { useAuth } from '../../contexts/auth';
 
 export default function Login() {
     const navagation = useNavigation();
+    const { signed, signIn } = useAuth();
 
+    console.log(signed)
+
+   function handleSignIn(){
+    signIn();  
+    }
+    
     return (
         <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}  enabled>
             <Container>
@@ -47,7 +56,7 @@ export default function Login() {
                         <InputEamil placeholder="Senha"></InputEamil>
                     </InputButtons>
 
-                    <ButtonRandomOrder>
+                    <ButtonRandomOrder onPress={handleSignIn}>
                         <ButtonRondomOrderText>Entrar</ButtonRondomOrderText>
                     </ButtonRandomOrder>
 
